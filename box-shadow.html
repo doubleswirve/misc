@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>     <html class="ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+	<head>
+		<meta charset="UTF-8">
+		<title>Box Shadow</title>
+
+		<style type="text/css">
+
+			div:first-child { position: relative; margin: 200px auto; width: 100px; height: 100px; background: red;  }
+
+			div > div       { position: absolute; top: 0; left: 0; width: 100px; height: 100px; display: table;      }
+
+			div > p         { display: table-cell; vertical-align: middle; text-align: center; font-family: Georgia; }
+
+
+			/* Only for < IE9's eyes to see */
+			div.hack        { display: none; }
+
+			/* Shadow part */
+
+			body > div:first-child {
+
+				   -moz-box-shadow: 0px 15px 31px -13px #000000;
+				-webkit-box-shadow: 0px 15px 31px -13px black;
+				        box-shadow: 0px 15px 31px -13px black;
+
+			}
+
+			.ie div.hack {
+
+				display: block; position: absolute; top: 25px; left: 0px; width: 70px; height: 70px; z-index: -1;
+
+				background: #000000;
+
+				    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.80');
+				-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.80')";
+
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div>
+			<div>
+				<p>box.</p>
+			</div>
+
+			<div class="hack"></div>
+
+		</div>
+
+	</body>
+</html>
