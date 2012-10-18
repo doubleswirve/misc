@@ -1,4 +1,1 @@
-misc
-====
-
-misc
+1. Box shadow example -- hopefully get a working IE hack
