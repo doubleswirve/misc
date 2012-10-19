@@ -12,11 +12,18 @@
       body { margin: 0; padding: 0; }
       ul   { list-style-type: none; }
 
-      .abs-wrapper { height: 20px; } /* the height of its child!!! the UL that is!!! */
+      /* the height of its child!!! the UL that is!!! */
+      .abs-wrapper { height: 20px; }
       .abs-wrapper { background-color: yellow; }
 
+
+      /* left 0, right 0 stretches it across the screen */
+      /* rgba -- self-explanatory */
+      /* z-index - same */
       .abs                      { position: absolute; left: 0; right: 0; background: rgba(255, 0, 0, 0.5); z-index: 9999; }
-      .abs > ul                 { position: relative; width: 950px; margin: 0 auto; text-align: center; }
+      /* center UL, no positioning necessary */
+      .abs > ul                 { width: 950px; margin: 0 auto; text-align: center; }
+      /* inline-block the LIs so, they don't go crazy with nested lists */
       .abs > ul > li            { display: inline-block; width: 100px; margin: 0 5px; vertical-align: top; }
 
 
