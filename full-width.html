@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Full Width</title>
+
+		<style type="text/css">
+
+      body { margin: 0; padding: 0; }
+      ul   { list-style-type: none; }
+
+      .abs-wrapper { height: 20px; } /* the height of its child!!! the UL that is!!! */
+      .abs-wrapper { background-color: yellow; }
+
+      .abs { position: absolute; left: 0; right: 0; background: rgba(255, 0, 0, 0.5); z-index: 9999; }
+      .abs > ul { position: relative; width: 950px; margin: 0 auto; text-align: center; }
+      .abs > ul > li { display: inline-block; width: 100px; margin: 0 5px; vertical-align: top; }
+      .abs > ul > li > ul { display: none; }
+      .abs > ul > li:hover > ul { display: block; }
+
+      .abs > ul > li > ul > li { text-align: left; color: white; }
+
+		</style>
+
+	</head>
+	<body>
+
+    <div>above text - my parent has no position</div>
+
+		<div class="abs-wrapper">
+    
+      <div class="abs">
+        <ul>
+          <li>
+            1
+            <ul><li>a</li><li>b</li><li>c</li></ul>
+          </li>
+          <li>
+            2
+            <ul><li>a</li><li>b</li><li>c</li></ul>
+          </li>
+          <li>
+            3
+            <ul><li>a</li><li>b</li><li>c</li></ul>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div>
+      beneath text - my parent also has no position : ( -->
+
+      <p>
+        In a gadda da vida
+        Iron Butterfly
+
+        In a gadda da vida, baby
+        (In the Garden of Eden)
+        In a gadda da vida, honey
+        Don't you know that I'm lovin' you
+
+        Oh, won't you come with me
+        And take my hand
+        Oh, won't you come with me
+        And walk this land
+        Please take my hand
+
+        In a gadda da vida, honey
+        Don't you know that I'm lovin' you
+        In a gadda da vida, baby
+        Don't you know that I'll always be true
+
+        Oh, won't you come with me
+        And take my hand
+        Oh, won't you come with me
+        And walk this land
+        Please take my hand
+
+        In a gadda da vida, honey
+        Don't you know that I'm lovin' you
+        In a gadda da vida, baby
+        Don't you know that I'll always be true
+
+        Oh, won't you come with me
+        And take my hand
+        Oh, won't you come with me
+        And walk this land
+        Please take my hand
+
+        In a gadda da vida, baby
+        (In the Garden of Eden)
+        In a gadda da vida, honey
+        Don't you know that I'm lovin' you
+
+        Oh, won't you come with me
+        And take my hand
+        Oh, won't you come with me
+        And walk this land
+        Please take my hand
+      </p>
+
+    </div>
+		
+	</body>
+</html>
