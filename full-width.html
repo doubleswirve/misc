@@ -1,5 +1,6 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!--[if lte IE 8]>     <html class="ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
   <head>
     <meta charset="UTF-8">
     <title>Full Width</title>
@@ -21,6 +22,17 @@
       .abs > ul > li:hover > ul { display: block; }
 
       .abs > ul > li > ul > li { text-align: left; color: white; }
+
+
+      /* IE HACKS */
+      .ie .abs {
+
+        background: red;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+            filter: alpha(opacity=50);
+      }
+
+      .ie .abs > ul > li { zoom: 1; *display: inline; }
 
     </style>
 
