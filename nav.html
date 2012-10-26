@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <title>Nav Test</title>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  <style type="text/css">
+
+    /* no horizontal scrolling */
+    /* see: http://css-tricks.com/full-browser-width-bars/ */
+    html, body {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0; padding: 0;
+    }
+
+    /* peek-a-boo */
+    /* see: http://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/ */
+    header > nav > ul > li ul { 
+      position: absolute; 
+      height: 1px; width: 1px;
+      padding: 0; margin: -1px;
+      clip: rect(0 0 0 0); overflow: hidden; 
+    }
+    header > nav > ul li:hover > ul {
+      height: auto; width: auto;
+      clip: auto; overflow: visible;
+    }
+
+
+
+    /* first level */
+    header > nav > ul          { text-align: center; background: #e2e2e2; }
+    header > nav > ul > li     { display: inline-block; position: relative; }
+    header > nav > ul > li > a { display: block; padding: 3px 5px; }
+
+
+    /* second level */
+    header > nav > ul > li > ul          { text-align: left; background: rgba(255, 31, 31, 0.8); white-space: nowrap; }
+    /* forces fly out to be right next to LI */
+    header > nav > ul > li > ul > li     { display: inline-block; float: left; position: relative; clear: both; }
+    header > nav > ul > li > ul > li > a { display: block; padding: 3px 5px; }
+    /* see: http://css-tricks.com/full-browser-width-bars/ --> comment by "timd.mackey" */
+    header > nav > ul > li > ul          { position: absolute; top: 100%; left: 0; margin: 0 -9999px; padding: 0 9999px; z-index: 100; }
+
+
+    /* third level */
+    header > nav > ul > li > ul > li > ul          { text-align: left; background: green; white-space: nowrap; }
+    header > nav > ul > li > ul > li > ul > li     { display: block; }
+    header > nav > ul > li > ul > li > ul > li > a { display: block; padding: 3px 5px; }
+    header > nav > ul > li > ul > li > ul          { position: absolute; top: 0; left: 99%; z-index: 101; }
+
+
+    /* IE */
+    .lt-ie9 header > nav > ul > li > ul { background: red; }
+
+    .lt-ie8 header > nav > ul > li,
+    .lt-ie8 header > nav > ul > li > ul > li { zoom: 1; *display: inline; }
+
+  </style>
+
+</head>
+<body>
+  <div>
+    Content above the navigation.
+  </div>
+
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">First level I</a>
+          <ul>
+            <li>
+              <a href="#">Level I-i - aaa</a>
+              <ul>
+                <li><a href="#">Level I-i-1</a></li>
+                <li><a href="#">Level I-i-2</a></li>
+                <li><a href="#">Level I-i-3</a></li>
+                <li><a href="#">Level I-i-4</a></li>
+                <li><a href="#">Level I-i-5</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Level I-ii - bbbbbbbbb</a>
+              <ul>
+                <li><a href="#">Level I-ii-1</a></li>
+                <li><a href="#">Level I-ii-2</a></li>
+                <li><a href="#">Level I-ii-3</a></li>
+                <li><a href="#">Level I-ii-4</a></li>
+                <li><a href="#">Level I-ii-5</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Level I-iii - ccc</a>
+              <ul>
+                <li><a href="#">Level I-iii-1</a></li>
+                <li><a href="#">Level I-iii-2</a></li>
+                <li><a href="#">Level I-iii-3</a></li>
+                <li><a href="#">Level I-iii-4</a></li>
+                <li><a href="#">Level I-iii-5</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">First level II</a>
+          <ul>
+            <li><a href="#">Level II-i - aaa</a></li>
+            <li><a href="#">Level II-ii - bbbbbbbbb</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">First level III</a>
+          <ul>
+            <li><a href="#">Level III-i - aaa</a></li>
+            <li><a href="#">Level III-ii - bbbbbbbbb</a></li>
+            <li><a href="#">Level III-iii - ccc</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">First level IV</a>
+          <ul>
+            <li><a href="#">Level IV-i - aaa</a></li>
+            <li><a href="#">Level IV-ii - bbbbbbbbb</a></li>
+            <li><a href="#">Level IV-iii - ccc</a></li>
+            <li><a href="#">Level IV-iiii - ddddd</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div>
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+    Content below the navigation.
+  </div>
+</body>
+</html>
